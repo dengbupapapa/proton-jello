@@ -92,6 +92,19 @@ pt mock
 5. 所有页面基础公用`第三方`less、js放到lib下，添加到fisconfig的deps-pack项数组中
 6. less中的mixins variables自动import到各个less文件中，顾不需要手动引入
 7. 各个样式的若涉及到 variables 请优先使用 variables，方便日后批量修改
+8. 别名，另外需要自己在fisconfig里加
+
+		packages: [{
+        	name: '@components',
+        	location: '/public/components',
+    	}, {
+        	name: '@lib',
+        	location: '/public/lib',
+    	}, {
+        	name: '@static',
+        	location: '/public/static',
+    	}]
+9. node_modules 直接require模块名字
 
 
 ### yapi 项目建立
