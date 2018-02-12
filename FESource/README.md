@@ -4,14 +4,9 @@
 
 
 ## 安装
-npm源指向私有库
 
 ```
-npm config --registry=http://npm.biuoo.com
-```
-安装proton-jello
-```
-npm install -g @obc/proton-jello
+npm install -g @obc/proton-jello --registry=http://10.19.13.50:80
 ```
 
 输入`pt -v` 输出fis的标识，说明安装成功
