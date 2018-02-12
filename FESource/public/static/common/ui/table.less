@@ -1,0 +1,54 @@
+@import './mixins/variables.less';
+@import './mixins/mixins.less';
+
+.table {
+  width: 100%;
+  border: @border-default;
+  background-color: #fff;
+  &.table-bordered {
+    tbody {
+      tr {
+        border-bottom-width: 0;
+      }
+      td {
+        border: @border-default;
+      }
+    }
+  }
+  thead {
+    background-color: #f8f8f8;
+    color: @color-text;
+    th {
+      height: 40px;
+      line-height: 40px;
+      font-weight: normal;
+      border: @border-default;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: @border-default;
+      &:hover {
+        background-color: #f5f5f5;
+      }
+    }
+    td {
+      padding: 15px 5px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+  th,
+  td {
+    vertical-align: middle;
+    &.text-left {
+      text-align: left;
+    }
+    &.text-right {
+      text-align: right;
+    }
+  }
+  a {
+    margin: 0 5px;
+  }
+}

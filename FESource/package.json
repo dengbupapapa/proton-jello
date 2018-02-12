@@ -1,0 +1,32 @@
+{
+  "name": "obc-idsp",
+  "version": "1.0.0",
+  "description": "AI hare",
+  "main": "fis-conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "release": "pt release dev -wcL",
+    "server": "pt server start --root './output'",
+    "serverWebapp": "pt server start --root '../webapp'",
+    "clean-dev": "pt server clean --root './output'",
+    "clean-bd": "pt server clean --root '../webapp'",
+    "start": "node assertPackDir.js --root './output' && npm run clean-dev && node assertPackDir.js --root './output' && npm run server && npm run release",
+    "build": "node assertPackDir.js --root '../webapp' && npm run clean-bd && pt release bd",
+    "buildServer": "node assertPackDir.js --root '../webapp' && npm run clean-bd && node assertPackDir.js --root '../webapp' && npm run serverWebapp && pt release bd"
+  },
+  "keywords": [
+    "fis3",
+    "jello",
+    "obc-idsp"
+  ],
+  "author": "dbp",
+  "license": "ISC",
+  "devDependencies": {
+    "fis-optimizer-clean-css": "0.0.12",
+    "fis-parser-less-import": "^0.1.0",
+    "fis3-hook-node_modules": "^2.2.9",
+    "fis3-packager-deps-pack": "^0.1.2"
+  }
+}

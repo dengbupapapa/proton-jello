@@ -1,0 +1,141 @@
+@import './mixins/variables.less';
+@import './mixins/mixins.less';
+
+.text-emphasis-variant(@color) {
+  color: @color;
+  a&:hover,
+  a&:focus {
+    color: darken(@color, 10%);
+  }
+}
+
+.bg-variant(@color) {
+  color: #fff;
+  background-color: @color;
+  a&:hover,
+  a&:focus {
+    background-color: darken(@color, 10%);
+  }
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: @headings-color;
+  small,
+  .small {
+    font-weight: normal;
+    line-height: 1;
+    font-size: @font-size-default;
+    color: @color-text;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 34px;
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+// Alignment
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+// Contextual colors
+a {
+  color: @color-link;
+  &:visited {
+    color: @color-link-active;
+  }
+  &:hover,
+  &:focus {
+    color: @color-link-active;
+  }
+}
+
+.text-primary {
+  .text-emphasis-variant(@color-primary);
+}
+
+.text-success {
+  .text-emphasis-variant(@color-success);
+}
+
+.text-warning {
+  .text-emphasis-variant(@color-warning);
+}
+
+.text-danger {
+  .text-emphasis-variant(@color-danger);
+}
+
+.bg-primary {
+  .bg-variant(@color-primary);
+}
+
+.bg-success {
+  .bg-variant(@color-success);
+}
+
+.bg-warning {
+  .bg-variant(@color-warning);
+}
+
+.bg-danger {
+  .bg-variant(@color-danger);
+}

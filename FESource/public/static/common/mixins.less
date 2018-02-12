@@ -1,0 +1,61 @@
+// 清楚浮动
+.clearfix() {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+}
+
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 输入框提示语颜色
+.placeholder(@color) {
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+}
+
+// card 阴影
+.card-box-shadow() {
+  background-color: #fff;
+  box-shadow: -1px 4px 6px #ebebeb;
+}
+
+.card-box-shadow-top() {
+  background-color: #fff;
+  box-shadow: 0 -3px 3px #ebebeb;
+}
+
+.card-box-shadow-bottom() {
+  background-color: #fff;
+  box-shadow: 0 3px 3px #ebebeb;
+}
+
+// 透明度
+.opacity (@opacity) {
+    @opacityPercentage: @opacity * 100;
+    -webkit-opacity: @opacity;
+    -moz-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    opacity: @opacity;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=(@{opacityPercentage}))";
+    filter: ~"alpha(opacity = (@{opacityPercentage}))";
+}

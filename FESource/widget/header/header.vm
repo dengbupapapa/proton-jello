@@ -1,0 +1,7 @@
+#script()
+require("./header.js");
+#end
+
+<div class="header">
+    this is header.
+</div>

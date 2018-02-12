@@ -1,0 +1,30 @@
+
+.tips {
+  position: fixed;
+  left: 50%;
+  top: -40px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 50px;
+  padding-right: 20px;
+  border-radius: 2px;
+  overflow: hidden;
+  color: #666;
+  font-size: 16px;
+  background: #fff url('./img/icon-tips.png') 0 0 no-repeat;
+  .card-box-shadow();
+
+  &.tips-success {
+    background-position: 0 0;
+  }
+  &.tips-info {
+    background-position: 0 -80px;
+  }
+  &.tips-warning {
+    background-position: 0 -40px;
+  }
+  &.tips-error {
+    background-position: 0 -120px;
+  }
+}
+

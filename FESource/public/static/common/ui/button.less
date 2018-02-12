@@ -1,0 +1,112 @@
+@import './mixins/variables.less';
+@import './mixins/mixins.less';
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: @button-font-size;
+  border: @border-default;
+  border-radius: 16px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: @color-link;
+  background-color: #fff;
+  outline: none;
+  &:active,
+  &:hover {
+    color: @color-primary-active;
+    border-color: @color-primary-active;
+  }
+  &.button-fill {
+    color: #fff;
+    background: @color-primary;
+    border: none;
+    &:active,
+    &:hover {
+      background: @color-primary-active;
+      border-color: @color-primary-active;
+    }
+    &.active,
+    &:active {
+      background: @color-primary-active;
+    }
+  }
+}
+
+.button-variant(@color, @color-active) {
+  border-color: @color;
+  color: @color;
+  &:active,
+  &:hover {
+    border-color: @color-active;
+    color: @color-active;
+  }
+  &.button-fill {
+    color: white;
+    background-color: @color;
+    &:active,
+    &:hover {
+      background-color: @color-active;
+      border-color: @color-active;
+    }
+    &.active,
+    &:active {
+      background-color: @color-active;
+    }
+  }
+}
+
+.button-themes() {
+  &.button-success {
+    .button-variant(@color-success, @color-success-active);
+  }
+  &.button-danger {
+    .button-variant(@color-danger, @color-danger-active);
+  }
+  &.button-warning {
+    .button-variant(@color-warning, @color-warning-active);
+  }
+}
+
+.button-themes();
+.buttons-row {
+  &.text-center {
+    .button {
+      margin: 0 5px;
+    }
+  }
+  &.text-right {
+    .button {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+  .button {
+    margin-right: 10px;
+  }
+}
+
+.buttons-tab {
+  .clearfix();
+  .button {
+    float: left;
+    border-width: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: @color-text;
+    height: 48px;
+    line-height: 46px;
+    min-width: 180px;
+    padding: 0;
+    font-size: 16px;
+    border-top: 3px solid transparent;
+    &:hover,
+    &.active {
+      border-top-color: @color-link;
+      background-color: #fff;
+      color: @color-link;
+    }
+  }
+}

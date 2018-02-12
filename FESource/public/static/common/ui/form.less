@@ -1,0 +1,115 @@
+@import './mixins/variables.less';
+@import './mixins/mixins.less';
+
+.form-input {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: @font-size-default;
+  line-height: @line-height-default;
+  color: @color-text;
+  background-color: #fff;
+  background-image: none;
+  border: @border-default;
+  border-radius: 17px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  &:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+  }
+  &[disabled],
+  &[readonly] {
+    background-color: #eee;
+    opacity: 1;
+  }
+  &[disabled] {
+    cursor: not-allowed;
+  }
+  .placeholder(#999);
+  textarea& {
+    height: auto;
+    min-height: 34px;
+  }
+  &.hundred {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.form-checkbox {
+  span& {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 7px;
+  }
+  [type="radio"],
+  [type="checkbox"] {
+    position: relative;
+    top: -3px;
+    left: -5px;
+  }
+  label {
+    padding-left: 5px;
+  }
+  +.form-checkbox {
+    margin-left: 10px;
+  }
+}
+
+.form-group {
+  padding: 10px 0;
+  .clearfix();
+  .input-label {
+    text-align: right;
+    padding-top: 7px;
+    max-width: 100%;
+    padding-right: 10px;
+    color: @headings-color;
+    &.input-required {
+      &:before {
+        content: '*';
+        color: @color-danger;
+        margin-right: 5px;
+        display: inline;
+        vertical-align: middle;
+      }
+    }
+  }
+  .form-input {
+    width: 240px;
+  }
+}
+
+.validate-form {
+  .form-input {
+    &.error-tips {
+      border-color: #ff5e17;
+    }
+  }
+  span.error-tips {
+    color: #ff5e17;
+    margin-left: 10px;
+    &:before {
+      content: '!';
+      display: inline-block;
+      vertical-align: middle;
+      width: 16px;
+      line-height: 16px;
+      height: 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      background-color: #f60;
+      vertical-align: middle;
+      // background: url('./img/icon-form-error.png') 50% 50% no-repeat;
+      margin-right: 5px;
+    }
+  }
+}

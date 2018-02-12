@@ -1,0 +1,85 @@
+@import './mixins/variables.less';
+@import './mixins/mixins.less';
+
+.pagination {
+  text-align: right;
+  color: @color-text-gray;
+  font-size: 12px;
+  padding: 10px 0;
+  .pages {
+    .clearfix();
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    border-left: @border-default;
+    li {
+      float: left;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      vertical-align: middle;
+      text-align: center;
+      border: @border-default;
+      background-color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      border-left: 0;
+      &:hover {
+        color: @headings-color;
+      }
+      &.active {
+        cursor: default;
+        color: #fff;
+        background-color: @color-link;
+        border-color: @color-link;
+      }
+      &.no {
+        cursor: default;
+      }
+    }
+    .jump {
+      background-image: url('./img/arrows-icon.png');
+      background-repeat: no-repeat;
+      &.first {
+        background-position: 0 0;
+      }
+      &.prev {
+        background-position: -35px 0;
+      }
+      &.next {
+        background-position: -68px 0;
+      }
+      &.last {
+        background-position: -100px 0;
+      }
+    }
+  }
+  .input,
+  .button {
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    height: 30px;
+    line-height: 30px;
+    border: @border-default;
+    background-color: #fff;
+  }
+  .input {
+    width: 40px;
+    padding: 0 5px;
+    margin-left: 20px;
+  }
+  .button {
+    border-radius: 0;
+    padding: 0;
+    width: 36px;
+    text-align: center;
+    height: 32px;
+    color: @color-text-gray;
+    cursor: pointer;
+    margin-left: 5px;
+    &:hover {
+      color: @headings-color;
+    }
+  }
+}

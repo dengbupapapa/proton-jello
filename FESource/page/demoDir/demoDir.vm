@@ -1,0 +1,510 @@
+#extends("/page/layout/layout.vm")
+
+## #require("./demoDir.less");
+
+#script()
+require("./demoDir.js");
+#end
+
+
+#block("content")
+
+    <div class="demo-box demoDir">
+        <h2 class="demo-title">row col 2222 $!{name}</h2>
+
+        <div class="row">
+            <div class="col-1 bg-warning">col-1</div>
+            <div class="col-11 bg-primary">col-11</div>
+        </div>
+
+        <div class="row">
+            <div class="col-11 offset-1 bg-danger">col-11</div>
+        </div>
+    </div>
+
+    <div class="demo-box">
+
+        <h2 class="demo-title">h1 ~ h6</h2>
+
+        <h1>标题 H1
+            <span class="small">悄悄话1</span>
+        </h1>
+        <h2>标题 H2
+            <span class="small">悄悄话</span>
+        </h2>
+        <h3>标题 H3
+            <span class="small">悄悄话</span>
+        </h3>
+        <h4>标题 H4
+            <span class="small">悄悄话</span>
+        </h4>
+        <h5>标题 H5
+            <span class="small">悄悄话</span>
+        </h5>
+        <h6>标题 H6
+            <span class="small">悄悄话</span>
+        </h6>
+
+    </div>
+
+    <div class="demo-box">
+
+        <h2 class="demo-title">text-align</h2>
+
+        <p class="text-left">文字左对齐</p>
+        <p class="text-center">文字中间对齐</p>
+        <p class="text-right">文字右对齐</p>
+
+    </div>
+
+    <div class="demo-box">
+
+        <h2 class="demo-title">文字颜色</h2>
+
+        <p class="text-primary">文字 primary 颜色
+            <a href="/23" class="text-success">链接 success 颜色</a>
+        </p>
+        <p class="text-success">文字 success 颜色
+            <a href="/32" class="text-primary">链接 primary 颜色</a>
+        </p>
+        <p class="text-warning">文字 warning 颜色
+            <a href="/32" class="text-danger">链接 danger 颜色</a>
+        </p>
+        <p class="text-danger">文字 danger 颜色
+            <a href="/32" class="text-warning">链接 warning 颜色</a>
+        </p>
+
+    </div>
+
+    <div class="demo-box">
+
+        <h2 class="demo-title">背景颜色</h2>
+
+        <p class="bg-primary">背景颜色 是 primary
+            <a href="/32">链接</a>
+        </p>
+        <p class="bg-success">背景颜色 是 success
+            <a href="/32">链接</a>
+        </p>
+        <p class="bg-warning">背景颜色 是 warning
+            <a href="/32">链接</a>
+        </p>
+        <p class="bg-danger">背景颜色 是 danger
+            <a href="/32">链接</a>
+        </p>
+
+    </div>
+
+    <div class="demo-box">
+
+        <h2 class="demo-title">列表 无边框</h2>
+
+        <table class="table">
+            <colgroup>
+                <col width="10%">
+                <col width="30%">
+                <col>
+                <col width="10%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>备注</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-primary">1</td>
+                    <td class="text-left">这里是一个名称</td>
+                    <td>备注什么，不写了</td>
+                    <td>
+                        <a href="/">编辑过了</a>
+                        <a href="/">编辑过了</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-danger">1</td>
+                    <td class="text-right bg-danger">这里是一个名称</td>
+                    <td>备注什么，不写了</td>
+                    <td>
+                        <a href="/3">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>这里是一个名称</td>
+                    <td>备注什么，不写了</td>
+                    <td>
+                        <a href="/32">编辑</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="demo-box">
+
+        <h2 class="demo-title">表格 有边框</h2>
+
+        <table class="table table-bordered">
+            <colgroup>
+                <col width="10%">
+                <col width="30%">
+                <col>
+                <col width="10%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>备注</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-primary">1</td>
+                    <td class="text-left">这里是一个名称</td>
+                    <td>备注什么，不写了</td>
+                    <td>
+                        <a href="/">编辑过了</a>
+                        <a href="/">编辑过了</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-danger">1</td>
+                    <td class="text-right bg-danger">这里是一个名称</td>
+                    <td>备注什么，不写了</td>
+                    <td>
+                        <a href="/3">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>这里是一个名称</td>
+                    <td>备注什么，不写了</td>
+                    <td>
+                        <a href="/32">编辑</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="demo-box">
+        <p>
+            <input class="form-input" type="text" placeholder="输入框">
+        </p>
+        <p>
+            <input class="form-input" type="text" disabled value="disabled">
+        </p>
+        <p>
+            <input class="form-input" type="text" readonly value="readonly">
+        </p>
+        <p>
+            <textarea class="form-input"></textarea>
+        </p>
+        <p>
+            <select class="form-input" name="">
+                <option value="">323</option>
+                <option value="">323</option>
+            </select>
+        </p>
+        <p>
+            <span class="form-checkbox">
+                <label>
+                    <input type="checkbox" name="1">什么跟什么</label>
+            </span>
+            <span class="form-checkbox">
+                <label>
+                    <input type="checkbox" name="1">什么跟什么</label>
+            </span>
+        </p>
+        <p>
+            <span class="form-checkbox">
+                <label>
+                    <input type="radio" name="2">什么跟什么</label>
+            </span>
+            <span class="form-checkbox">
+                <label>
+                    <input type="radio" name="2">什么跟什么</label>
+            </span>
+        </p>
+    </div>
+
+    <div class="demo-box">
+        <form action="">
+            <div class="form-group">
+                <div class="col-2">
+                    <div class="input-label">这是什么呢</div>
+                </div>
+                <div class="col-3">
+                    <input class="form-input" type="text">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-1">
+                    <div class="input-label input-required">这是什么呢</div>
+                </div>
+                <div class="col-2">
+                    <input class="form-input hundred" type="text">
+                </div>
+                <div class="col-1">
+                    <div class="input-label input-required">这是什么呢</div>
+                </div>
+                <div class="col-2">
+                    <input class="form-input hundred" type="text">
+                </div>
+                <div class="col-1">
+                    <div class="input-label input-required">这是什么呢</div>
+                </div>
+                <div class="col-2">
+                    <input class="form-input hundred" type="text">
+                </div>
+                <div class="col-1">
+                    <div class="input-label input-required">这是什么呢</div>
+                </div>
+                <div class="col-2">
+                    <input class="form-input hundred" type="text">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="demo-box">
+        <p>
+            <a href="javascript:void(0);" class="button">按钮</a>
+            <button type="button" class="button">按钮</button>
+            <input type="button" class="button" value="按钮">
+        </p>
+        <p>
+            <button type="button" class="button">button</button>
+            <button type="button" class="button button-fill">button</button>
+        </p>
+        <p>
+            <button type="button" class="button button-success">button-success</button>
+            <button type="button" class="button button-success button-fill">button-success</button>
+        </p>
+        <p>
+            <button type="button" class="button button-danger">button-danger</button>
+            <button type="button" class="button button-danger button-fill">button-danger</button>
+        </p>
+        <p>
+            <button type="button" class="button button-warning">button-warning</button>
+            <button type="button" class="button button-warning button-fill">button-warning</button>
+        </p>
+        <div class="buttons-row text-center">
+            <button type="button" class="button">取消</button>
+            <button type="button" class="button button-fill">保存</button>
+        </div>
+        <div class="buttons-row text-right">
+            <button type="button" class="button">取消</button>
+            <button type="button" class="button button-fill">保存</button>
+        </div>
+        <div class="buttons-row">
+            <button type="button" class="button">取消</button>
+            <button type="button" class="button button-fill">保存</button>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <div class="buttons-tab">
+            <button type="button" class="button">tab1</button>
+            <button type="button" class="button active">tab2</button>
+            <button type="button" class="button">tab3</button>
+            <button type="button" class="button">tab4</button>
+        </div>
+        <div class="demo-box" style="margin: 0;">
+            2323
+        </div>
+    </div>
+
+    <div class="demo-box">
+        <div class="pagination">
+            第 1/10 页 每页 9 项 共 0 项
+            <ul class="pages">
+                <li class="jump first"></li>
+                <li class="jump prev"></li>
+                <li class="page active" data-page="1">1</li>
+                <li class="page" data-page="2">2</li>
+                <li class="page" data-page="3">3</li>
+                <li class="jump next"></li>
+                <li class="jump last"></li>
+            </ul>
+            <input type="text" class="input" />
+            <button type="button" class="button">跳转</button>
+        </div>
+    </div>
+
+    <div class="demo-box">
+        <div class="progress">
+            <div class="progress-bar" style="width: 20%;">
+                20%
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <div class="card">
+            <div class="card-title">
+                <a class="arrows" href="javascript:void(0);"></a>
+                这里是名称
+            </div>
+            <div class="card-body active">
+                <form class="validate-form" action="">
+                    <div class="form-group">
+                        <div class="col-2">
+                            <div class="input-label input-required">这是什么呢</div>
+                        </div>
+                        <div class="col-3">
+                            <input class="form-input" type="text">
+                        </div>
+                        <div class="col-2">
+                            <div class="input-label input-required">这是什么呢</div>
+                        </div>
+                        <div class="col-3">
+                            <input class="form-input" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-2">
+                            <div class="input-label input-required">这是什么呢</div>
+                        </div>
+                        <div class="col-10">
+                            <select class="form-input" name="" id="">
+                                <option value="">323</option>
+                                <option value="">323</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-2">
+                            <div class="input-label input-required">这是什么呢</div>
+                        </div>
+                        <div class="col-10">
+                            <span class="form-checkbox">
+                                <label>
+                                    <input type="checkbox" name="">什么跟什么</label>
+                            </span>
+                            <span class="form-checkbox">
+                                <label>
+                                    <input type="checkbox" name="">什么跟什么</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-10 offset-2 buttons-row">
+                            <button type="button" class="button">取消</button>
+                            <button type="button" class="button button-fill">保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="buttons-row text-center">
+                    <button type="button" class="button button-fill">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <div class="card">
+            <div class="card-title">
+                <a class="arrows" href="javascript:void(0);"></a>
+                表单验证
+            </div>
+            <div class="card-body active">
+                <form class="validate-form" id="j-validate-form" action="/">
+                    <div class="form-group">
+                        <div class="col-2">
+                            <div class="input-label input-required">用户名</div>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-input" type="text" name="userName" required>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-label input-required">昵称</div>
+                        </div>
+                        <div class="col-4">
+                            <input class="form-input" type="text" name="nickname" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-2">
+                            <div class="input-label input-required">部门</div>
+                        </div>
+                        <div class="col-10">
+                            <select class="form-input" name="opt" required>
+                                <option value="">请选择部门</option>
+                                <option value="1">部门一</option>
+                                <option value="2">部门二</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-2">
+                            <div class="input-label input-required">性别</div>
+                        </div>
+                        <div class="col-10">
+                            <div class="j-validate-group">
+                                <span class="form-checkbox">
+                                    <label>
+                                        <input class="j-validate-group-item" type="radio" name="sex" value="1" required>男</label>
+                                </span>
+                                <span class="form-checkbox">
+                                    <label>
+                                        <input class="j-validate-group-item" type="radio" name="sex" value="0" required>女</label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="buttons-row text-center">
+                    <button type="button" class="button button-fill" id="j-validate-form-submit">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-box">
+        <p>
+            <button type="button" class="button button-fill" id="j-poppup-a">显示弹窗</button>
+        </p>
+        <p>
+            <button type="button" class="button button-fill" id="j-loading-a">显示Loading</button>
+        </p>
+        <p>
+            <button type="button" class="button button-fill" id="j-tips-a">Tips</button>
+        </p>
+        <p>
+            <button type="button" class="button button-fill" id="j-modal-a">对话框</button>
+        </p>
+    </div>
+
+    <div class="popup">
+        <div class="popup-overlay"></div>
+        <div class="modal">
+            <div class="modal-header">
+                <a class="close" href="javascript: void(0);">&times;</a>
+                <h3 class="title">确认操作</h3>
+            </div>
+            <div class="modal-body">
+                <div class="dialog-modal-tip">
+                    2323
+                </div>
+            </div>
+            <div class="modal-footer buttons-row text-center">
+                <button type="button" class="button button-fill btn-sure">确定</button>
+                <button type="button" class="button btn-false">取消</button>
+            </div>
+        </div>
+    </div>
+
+#end
+
+#end

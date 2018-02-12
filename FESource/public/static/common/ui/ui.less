@@ -1,0 +1,148 @@
+@import './reset.less';
+@import './type.less';
+@import './grid.less';
+@import './table.less';
+@import './form.less';
+@import './button.less';
+@import './pagination.less';
+@import './progress.less';
+@import './card.less';
+
+html, body {
+    font-size: @font-size-default;
+    color: @color-text;
+    background-color: @color-bg;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix {
+    .clearfix();
+}
+
+.IOP-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #20292f;
+    color: #fff;
+
+    .logo {
+        display: block;
+        background-color: @color-link;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        position: relative;
+        z-index: 99;
+
+        img {
+            vertical-align: middle;
+        }
+
+    }
+
+    .nav-sidebar {
+        position: fixed;
+        left: 0;
+        top: 80px;
+        bottom: 10px;
+        width: 16.66666667%;
+
+        .nav-sidebar-content {
+            margin: 0 0 0 10%;
+        }
+
+        .main-menu {
+            margin-bottom: 4px;
+            position: relative;
+
+            &.active, &:hover {
+                box-shadow: #1d1d1d -2px 0 4px;
+
+                .main-menu-link {
+                    background-color: #26363f;
+                }
+
+            }
+
+            &:hover {
+                .sub-menu {
+                    display: block;
+                }
+
+            }
+
+        }
+
+        .main-menu-link {
+            display: block;
+            position: relative;
+            padding: 0 20px 0 10%;
+            height: 64px;
+            line-height: 64px;
+            color: #fff;
+            border-radius: @border-radius 0 0 @border-radius;
+        }
+
+        .menu-icon {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            background-color: #fff;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .sub-menu {
+            display: none;
+            width: 680px;
+            min-height: 148px;
+            background-color: #26363f;
+            border-radius: 0 4px 4px 0;
+            box-shadow: #c4cacc 3px 3px 3px;
+            position: absolute;
+            right: -680px;
+            top: -42px;
+
+            ul {
+                padding: 20px;
+            }
+
+            li {
+                float: left;
+            }
+
+        }
+
+        .menu-link {
+            display: block;
+            width: 160px;
+            height: 36px;
+            line-height: 36px;
+            text-indent: 10px;
+            border-radius: 4px;
+            color: #fff;
+
+            &:hover {
+                background-color: @color-link;
+            }
+
+        }
+
+        .plus {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background: url('./img/sidebar-plus.png') no-repeat;
+            top: 28px;
+            right: 20px;
+        }
+
+    }
+
+}

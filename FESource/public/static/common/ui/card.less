@@ -1,0 +1,55 @@
+@import './mixins/variables.less';
+@import './mixins/mixins.less';
+
+.card {
+  .card-box-shadow();
+
+  .card-title {
+    line-height: 30px;
+    padding: 25px 20px;
+    font-size: 14px;
+    color: @headings-color;
+    .card-box-shadow-bottom();
+
+    .arrows {
+      float: right;
+      display: inline-block;
+      margin-top: 10px;
+      width: 20px;
+      height: 10px;
+      cursor: pointer;
+      position: relative;
+      // background-color: #555;
+      &:after,
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        border-top: 6px dashed @border-default-color;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        top: 3px;
+        z-index: 2;
+      }
+      &:after {
+        top: 0px;
+        z-index: 3;
+        border-top-color: #fff;
+      }
+    }
+  }
+  .card-body {
+    padding: 20px;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .card-footer {
+    padding: 20px 0;
+    .card-box-shadow-top();
+  }
+}

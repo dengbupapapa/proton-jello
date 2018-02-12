@@ -1,0 +1,15 @@
+#extends("/page/layout/layout.vm")
+
+#require("/public/static/home/home.less");
+
+#script()
+require("/public/static/home/home.js");
+#end
+
+#block("content")
+
+<div>this is home page.</div>
+
+#end
+
+#end
